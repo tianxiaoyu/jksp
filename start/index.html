@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+    <style>
+      .fontsize{
+          font-size:90px;
+      }
+      .fontcolor{
+          color:yellow
+      }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div>{{message}}</div>
+        <div>
+            <img v-bind:src="imgsrc" :style="[{width:imgsrc,height:imgheight}]" alt="">
+        </div>
+        <div :class="[fontsize,fontColor]">{{mes}}</div>
+        <ol>
+            <li v-for="(c, i) in comments" :class="i%2 !=0 ?'odd':'even'"> {{c.comment}}</li>
+        </ol>
+        <ol>
+                <li v-for="(value,key) in courses" > {{key}}:{{value}}</li>
+            </ol>
+            <div>{{inputvalue}}</div>
+      <ul id="container">
+          
+        <li>
+            <input id="input" type="text" >
+        </li>
+      </ul>
+    </div>
+    <script src="jquery.js"></script>
+        <script src="index.js"></script>
+</body>
+</html>
